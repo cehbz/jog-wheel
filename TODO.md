@@ -1,8 +1,13 @@
 # TODO — jog/shuttle wheel
 
-Design notes and history: jog-wheel-session.md.
+## Videyt USB knob
 
-- On parts arrival: check cheap USB knob in Karabiner-EventViewer (VID/PID, emitted events, QMK/VIA reflashable?); assess LPD3806-class encoder bearing drag with the milled aluminum knob mounted.
-- If coast disappoints: dedicated spindle (two 608 bearings, printed housing, shoulder-bolt shaft) + MT6701 in ABZ mode.
-- RP2040 firmware: PIO quadrature decode, velocity-thresholded J-K-L with ramp, sub-threshold deadband.
-- Optional adjustable eddy brake: aluminum disc on shaft collar, magnet on printed thumbscrew bracket.
+- Restore bottom knob: try Videyt Windows app on native Windows hardware (see KB for full context).
+
+## DIY jog wheel
+
+- Test encoder + aluminum knob when parts arrive — evaluate coast feel and bearing drag.
+- If coast disappoints: dedicated two-bearing spindle + MT6701 magnetic encoder.
+- Choose MCU (likely ESP32 family).
+- Firmware: hardware quadrature decode, velocity-thresholded J-K-L with ramp, sub-threshold deadband.
+- Nice-to-have: adjustable eddy-current brake (aluminum disc + magnet on thumbscrew bracket). Add if easy, drop if not.
